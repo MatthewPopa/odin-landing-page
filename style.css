@@ -150,7 +150,7 @@ a {
     font-size: 18px;
     color: var(--bg-color);
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .hero-content {
@@ -170,7 +170,7 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    transform: rotateZ(-10deg);
+    /*transform: rotateZ(-10deg);*/
 }
 
 button {
@@ -195,11 +195,12 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: -webkit-linear-gradient(var(--bg-color), #121820);
 }
 
 .section-title {
     font-size: 2em;
-    color: var(--bg-color);
+    color: var(--white);
     margin-top: 64px;
 }
 
