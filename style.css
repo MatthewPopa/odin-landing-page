@@ -352,7 +352,7 @@ button {
     top: 5em;
     right: calc(-20em + 50%);
     font-size: .8em;
-    transform: translate(-50%, 3em);
+    transform: translate(-50%, -3em);
 }
 
 .circ4 {
