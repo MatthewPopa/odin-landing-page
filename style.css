@@ -30,6 +30,7 @@ body {
 .footer {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .section.one,
@@ -40,7 +41,7 @@ body {
 
 .section.one {
     background: rgb(209,178,213);
-    background: linear-gradient(142deg, rgba(209,178,213,1) 0%, rgba(225,141,206,1) 28%, rgba(107,186,241,1) 100%);    
+    background: linear-gradient(142deg, #d1b2d5 0%, #e18dce 28%, #6bbaf1 100%);    
 }
 
 .footer {
@@ -49,11 +50,12 @@ body {
 
 .nav {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     margin: -16px 0;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -134,8 +136,10 @@ a {
 
 .hero {
     display: flex;
+    position: relative;
     margin: 160px 0 128px;
     gap: 32px;
+    z-index: 2;
 }
 
 .hero-main {
@@ -164,7 +168,7 @@ a {
     align-items: center;
     background-color: #6d747d;
     text-align: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -209,6 +213,7 @@ button {
     justify-content: center;
     gap: 48px;
     margin-bottom: 96px;
+    flex-wrap: wrap;
 }
 
 .image {
@@ -282,3 +287,29 @@ button {
 .action-text {
     color: var(--secondary);
 }
+
+.circle {
+    border-radius: 100%;
+    position: fixed;
+    background: linear-gradient(#c3cff7 20%, #8a87b8);
+    box-shadow: 0 0 1em #0000000f,
+                inset 0 0 1em #fff,
+                inset 1em 0 2em #e18dce,
+                inset -1em 0 2em #6bbaf1;
+  }
+
+  .circ1 {
+    width: 8em;
+    height: 8em;
+    top: 3em;
+    left: 3em;
+    transform: translateZ(-2px);
+  }
+
+  .circ2 {
+    width: 7em;
+    height: 7em;
+    top: 5em;
+    right: 3em;
+    font-size: 36px;
+  }
