@@ -60,7 +60,9 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);  opacity: 0;
+    transform: translateY(-24px);
+    animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 ul {
@@ -148,6 +150,9 @@ a {
     margin: 0;
     margin-bottom: 16px;
     line-height: .9;
+    opacity: 0;
+    transform: translateX(-48px);
+    animation: fadein 800ms 700ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .hero-secondary {
@@ -155,6 +160,15 @@ a {
     color: var(--bg-color);
     margin: 0;
     margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-48px);
+    animation: fadein 900ms 800ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.hero-buttons {
+    opacity: 0;
+    transform: translateX(-48px);
+    animation: fadein 1000ms 900ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .hero-content {
@@ -174,6 +188,8 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    animation: fadein 800ms 1100ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     /*transform: rotateZ(-10deg);*/
 }
 
@@ -296,6 +312,8 @@ button {
                 inset 0 0 1em #fff,
                 inset 1em 0 2em #e18dce,
                 inset -1em 0 2em #6bbaf1;
+    opacity: 0;
+    animation: fadein 800ms 1300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
   .circ1 {
@@ -303,7 +321,7 @@ button {
     height: 8em;
     top: 3em;
     left: 3em;
-    transform: translateZ(-2px);
+    transform: translateY(-3em);
   }
 
   .circ2 {
@@ -312,4 +330,12 @@ button {
     top: 5em;
     right: 3em;
     font-size: 36px;
+    opacity: 0;
+    transform: translateY(3em);
   }
+
+  @keyframes fadein {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }}
