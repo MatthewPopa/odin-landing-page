@@ -226,6 +226,7 @@ a {
 .left-layout .hero-container:nth-child(2) {
     transform: translateY(1.5rem);
     opacity: 0;
+    padding: 1.5em 0 0 0;
     animation: fadein 800ms 1500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -271,17 +272,60 @@ a {
     margin: 0;
 }
 
-.emoji {
-    width: 80%;
-    height: 80%;
-    min-height: 11rem;
-    background: center / contain url("astonished_face_3d.png") no-repeat;
+.emoji-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25em;
+    padding: .5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: .5em;
+    margin: 1em;
 }
 
-.emoji:hover {
-    background: center / contain url("astonished-face_1f632.png") no-repeat;
-    animation: bounce 0.7s forwards;
+.emoji {
+    flex: 1;
+    height: 50%;
+    width: 50%;
+    min-height: 5rem;
+    min-width: 5rem;
     cursor: pointer;
+}
+
+.emoji1 {
+    background: center / contain url("images/astonished_face_3d.png") no-repeat;
+}
+
+.emoji1:hover {
+    background: center / contain url("images/astonished-face_1f632.png") no-repeat;
+    animation: bounce 0.7s forwards;
+}
+
+.emoji2 {
+    background: center / contain url("images/see-no-evil_monkey_3d.png") no-repeat;
+}
+
+.emoji2:hover {
+    background: center / contain url("images/see-no-evil-monkey_animated.png") no-repeat;
+    animation: bounce 0.7s forwards;
+}
+
+.emoji3 {
+    background: center / contain url("images/hot_face_3d.png") no-repeat;
+}
+
+.emoji3:hover {
+    background: center / contain url("images/hot-face_animated.png") no-repeat;
+    animation: bounce 0.7s forwards;
+}
+
+.emoji4 {
+    background: center / contain url("images/cold_face_3d.png") no-repeat;
+}
+
+.emoji4:hover {
+    background: center / contain url("images/cold-face_animated.png") no-repeat;
+    animation: bounce 0.7s forwards;
 }
 
 .avatar {
@@ -301,7 +345,7 @@ a {
     font-size: 1em;
 }
 
-.job-title {
+.subtitle {
     font-size: .8em;
     color: var(--secondary);
 }
