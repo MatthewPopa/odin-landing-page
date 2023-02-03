@@ -12,6 +12,10 @@ html {
     background: #ffb7b7; /* WebKit/Blink Browsers */
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -215,6 +219,13 @@ a {
     transform: translateY(1.5rem);
     opacity: 0;
     animation: fadein 800ms 1100ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    max-height: calc(100% - 3em);
+}
+
+.left-layout .hero-container:nth-child(2) {
+    transform: translateY(1.5rem);
+    opacity: 0;
+    animation: fadein 800ms 1500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .right-layout .hero-container:nth-child(1) {
@@ -226,17 +237,25 @@ a {
 .right-layout .hero-container:nth-child(2) {
     transform: translateY(1.5rem);
     opacity: 0;
-    animation: fadein 800ms 1500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: fadein 800ms 1700ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .shoes {
     position: relative;
     bottom: 4em;
+    cursor: pointer;
+    transition: all .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.shoes:hover {
+    transform: translateY(-1em);
 }
 
 .product-details {
     position: relative;
-    bottom: 3em;
+    margin-top: -3em;
+    margin-bottom: 1em;
+    cursor: pointer;
     width: 80%;
 }
 
@@ -247,7 +266,7 @@ a {
 .emoji {
     width: 80%;
     height: 80%;
-    min-height: 12rem;
+    min-height: 11rem;
     background: center / contain url("astonished_face_3d.png") no-repeat;
 }
 
@@ -387,7 +406,7 @@ button {
                 inset 1em 0 2em #e18dce,
                 inset -1em 0 2em #6bbaf1;
     opacity: 0;
-    animation: circfadein 800ms 1700ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: circfadein 800ms 2000ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
 .circ1 {
