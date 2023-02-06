@@ -91,6 +91,7 @@ body {
 
 .rainbow {
     background: -webkit-linear-gradient(35deg, #6bbaf1, #e18dce);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -105,10 +106,6 @@ body {
     opacity: 0;
     transform: translateY(-1.5rem);
     animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
- {
-    
 }
 
 .link {
@@ -200,6 +197,7 @@ a {
 
 .glass-text {
         background: -webkit-linear-gradient(rgb(255, 255, 255, .5), rgb(242, 246, 255, .5));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: .3px #fff;
@@ -209,7 +207,7 @@ a {
 .hero {
     display: flex;
     position: relative;
-    margin: 160px 0 128px;
+    padding: 8em 0 4em;
     gap: 32px;
     z-index: 2;
     flex-wrap: wrap;
@@ -259,6 +257,9 @@ a {
 .hero-content {
     flex: 1;
     min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-layout {
@@ -462,7 +463,6 @@ a {
     justify-content: center;
     align-items: center;
     background: -webkit-linear-gradient(90deg, #3e3c7a, #5d5ab9, #8660c4);
-    top: -12em;
 }
 
 .two-container {
@@ -685,7 +685,7 @@ a {
     background: -webkit-linear-gradient(90deg, #8660c4, #ffffff00);
     height: 12em;
     position: absolute;
-    top: -12em;
+    top: calc(-12em + 1px);
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -715,5 +715,14 @@ a {
 @media (max-width: 1040px) {
     .circ2 {
         right: -20%;
+    }
+}
+
+@media (max-width: 460px) {
+    .hide {
+        display: none;
+    }
+    .two-container {
+        padding: 2em 1em;
     }
 }
