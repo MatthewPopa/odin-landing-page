@@ -198,6 +198,40 @@ a {
     bottom: 2px;
 }
 
+.gg-arrow-up-o {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 20px
+}
+.gg-arrow-up-o::after,
+.gg-arrow-up-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 4px
+}
+.gg-arrow-up-o::after {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 6px
+}
+.gg-arrow-up-o::before {
+    width: 2px;
+    height: 10px;
+    left: 8px;
+    background: currentColor
+}
+
 .glass-text {
         background: -webkit-linear-gradient(rgb(255, 255, 255, .5), rgb(242, 246, 255, .5));
         background-clip: text;
@@ -318,6 +352,7 @@ a {
 }
 
 .right-layout .hero-container:nth-child(2) {
+    align-items: flex-start;
     transform: translateY(1.5rem);
     opacity: 0;
     animation: fadein 800ms 1700ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
@@ -435,6 +470,19 @@ a {
 .subtitle {
     font-size: .8em;
     color: var(--secondary);
+}
+
+.chart-info {
+    padding: 1em 0 0 1em;
+}
+
+.dollars {
+    font-size: 2em;
+    align-self: flex-start;
+}
+
+.percent {
+    color: #3882f6;
 }
 
 .button {
@@ -594,6 +642,8 @@ a {
 
 .action-title {
     font-size: 3em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
 .action-text {
@@ -651,22 +701,23 @@ a {
     visibility: hidden;
     opacity: 0;
     font-weight: 400;
-    font-size: 12px;
     color: var(--gray-gunmetal);
     text-align: center;
     border-radius: 4px;
     padding: 4px 8px;
     position: absolute;
     top: 100%;
-    transform: translate(calc(-50% + 22px), -5px)
+    transform: translate(100%)
     scale3d(.5,.5,1);
     z-index: 3;
     transition-duration: .2s;
     cursor: default;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
 }
 
 .tooltip:hover .tooltiptext {
-    transform: translate(calc(-50% + 22px))
+    transform: translate(100%)
     scale3d(1,1,1);
     opacity: 1;
     visibility: visible;
@@ -748,6 +799,19 @@ a {
     fill: var(--purple-space-cadet);
 }
 
+#chart {
+    fill: none;
+    stroke:#3882f6;
+    stroke-width: 4px;
+    width: 100%;
+    height: auto;
+    margin-top: -1em;
+}
+
+.chart-fill {
+    fill: #3882f61a;
+}
+
 @keyframes fadein {
     to {
         opacity: 1;
@@ -784,5 +848,11 @@ a {
     }
     .two-container {
         padding: 2em 1em;
+    }
+    .call-to-action {
+        padding: 0;
+    }
+    .quote-content {
+        padding: 64px 1em;
     }
 }
