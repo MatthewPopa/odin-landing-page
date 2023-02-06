@@ -14,7 +14,7 @@
             <div class="circle circ2"></div>
             <div class="circle circ3"></div>
             <div class="circle circ4"></div>
-            <div class="nav">
+            <div class="nav glass">
                 <div class="logo"><i class="mark"></i>Project: LP
                 </div>
                 <ul>
@@ -25,10 +25,10 @@
             </div>
             <div class="hero">
                 <div class="hero-content">
-                    <h1 class="hero-main">It's time to<br>add some <span class="glass-text">Glass</span>
+                    <h1 class="hero-main"><span class="glass-text">Glass</span><br>Pure CSS.
                     </h1>
                     <p class="hero-secondary">
-                        This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast
+                        Built for <a style="&:hover" href="https://theodinproject.com" target="_blank">The Odin Project</a>, this site is a demonstration of Glassmorphism using strictly HTML & CSS. Enjoy interacting with different elements!
                     </p>
                     <div class="hero-buttons">
                     <button>Sign up</button>
@@ -46,6 +46,15 @@
                             </div>
                         </div>
                         <div class="hero-container">
+                            <a target="_blank" href="https://github.com/MatthewPopa"><img class="avatar" src="images/avatar.jpeg"></a>
+                            <div class="profile-info">
+                                <a target="_blank" href="https://github.com/MatthewPopa"><div class="name">Matthew Popa</div>
+                                <p class="subtitle">UI/UX Designer</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-layout">
+                        <div class="hero-container">
                             <div class="emoji-title">
                                 <h3>Make them POP!</h3>
                                 <p class="subtitle">Hover the emojis</p>
@@ -57,22 +66,16 @@
                                 <div tabindex="0" class="emoji emoji4"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="right-layout">
                         <div class="hero-container">
-                            <a target="_blank" href="https://github.com/MatthewPopa"><img class="avatar" src="images/avatar.jpeg"></a>
-                            <div class="profile-info">
-                                <a target="_blank" href="https://github.com/MatthewPopa"><div class="name">Matthew Popa</div>
-                                <p class="subtitle">UI/UX Designer</p></a>
-                            </div>
-                        </div>
-                        <div class="hero-container">
-                            <img class="shoes" src="images/shoes.png" width="80%">
-                            <div class="product-details">
-                                <h4>Nike React.js 3</h4>
-                                <p>Men's Shoe</p>
-                                <p><b>$130</b></p>
-                            </div>
+                            <div class="tooltip" tabindex="0">
+                                <svg width="100" height="100">
+                                  <circle stroke="#2ECC40" stroke-width="4" fill="transparent" r="36" cx="50" cy="50"></circle>
+                                  <path style="fill: transparent;
+                                  stroke: #41414d;
+                                  stroke-width: 5px;" d="M 21.999999999999996 4 A 36 36 0 0 1 38.086577177683004 30.076016016975714"></path>
+                                </svg>
+                                <div class="tooltiptext glass">Fox (67.6%)</div>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -80,9 +83,14 @@
         </div>
     </div>
     <div class="section two">
-        <h2 class="section-title">
-            Some random information.
-        </h2>
+        <div class="bottom-gradient"></div>
+        <div class="two-container glass">
+        <div class="section-title">
+            <h2>
+                Dark Mode
+            </h2>
+            <p class="rainbow">ft. iOS App Store</p>
+        </div>
         <div class="section-info">
             <div class="info">
                 <div class="image"></div>
@@ -102,6 +110,13 @@
             </div>
         </div>
     </div>
+    <div class="custom-shape">
+        <div class="shape-bottom"></div>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    </div>
     <div class="section three">
         <div class="quote-content">
             <p class="quote">Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it. But small is the gate and narrow the road that leads to life, and only a few find it.</p>
@@ -120,7 +135,7 @@
         </div>
     </div>
     <div class="footer">
-        © 2023 Matthew Popa
+        <span>© 2023 <a class="footer-link rainbow" target="_blank" href="https://matthewpopa.com">Matthew Popa</a></span>
     </div>
 </body>
 </html>
