@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
 
 html {
     box-sizing: border-box;
@@ -251,7 +251,8 @@ a {
 .github-logo {
     fill: var(--white);
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: text-top;
+    margin: 0 -4px 0 4px;
 }
 
 .hero-content {
@@ -441,7 +442,7 @@ a {
     color: var(--white);
     font-weight: 700;
     font-size: 18px;
-    padding: 16px 32px;
+    padding: 16px 24px;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -520,37 +521,49 @@ a {
 }
 
 .section.three {
-    background-color: var(--secondary);
-}
-
-.section.four {
-    display: none;
+    background-color: var(--purple-space-cadet);
 }
 
 .quote-content {
     width: 800px;
+    gap: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 64px;
-    color: var(--gray-gunmetal);
+    margin-top: 4em;
+    color: var(--white);
+}
+
+.quote-content img {
+    height: 4em;
+    width: 4em;
+    border-radius: 100%;
+    outline: 2px solid #9fa5af;
+    outline-offset: 4px;
 }
 
 .quote {
     font-style: italic;
     font-weight: 300;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
+    text-align: center;
 }
 
 .author {
     font-weight: 700;
     margin: 0;
-    align-self: flex-end;
+    line-height: 1.2;
     font-size: 1.3em;
-    margin-top: 8px;
+    text-align: center;
 }
+
+.author .subtitle {
+    color: #9fa5af;
+    font-weight: 400;
+} 
 
 .call-to-action {
     background-color: var(--main-color);
@@ -689,6 +702,39 @@ a {
     left: 0;
     width: 100%;
     overflow: hidden;
+}
+
+.backdrop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 8em;
+    margin-top: -4em;
+    line-height: 0;
+    background: -webkit-linear-gradient(90deg, #ffffff10, #302f4d1f);
+}
+
+.backdrop.top {
+    top: 0;
+}
+
+.backdrop.bottom {
+    bottom: -8em;
+    transform: rotateX(180deg) scaleX(-1);
+}
+
+.backdrop svg {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: calc(120% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.backdrop .shape-fill {
+    fill: var(--purple-space-cadet);
 }
 
 @keyframes fadein {
