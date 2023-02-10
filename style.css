@@ -706,9 +706,9 @@ a {
     border-radius: 4px;
     padding: 4px 8px;
     position: absolute;
-    top: 100%;
-    transform: translate(100%)
-    scale3d(.5,.5,1);
+    left: 105%;
+    top: 80%;
+    transform: scale3d(.5,.5,1);
     z-index: 3;
     transition-duration: .2s;
     cursor: default;
@@ -716,11 +716,21 @@ a {
     backdrop-filter: blur(20px);
 }
 
-.tooltip:hover .tooltiptext {
-    transform: translate(100%)
-    scale3d(1,1,1);
+.hero-container:hover .tooltiptext {
+    transform: scale3d(1,1,1);
     opacity: 1;
     visibility: visible;
+}
+
+.tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.8) transparent transparent;
 }
 
 .custom-shape {
