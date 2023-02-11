@@ -89,7 +89,8 @@ body {
 .section.one {
     color: var(--gray-gunmetal);
     background: rgb(209,178,213);
-    background: linear-gradient(142deg, #d1b2d5 0%, #e18dce 28%, #6bbaf1 100%);    
+    background: linear-gradient(142deg, #d1b2d5 0%, #e18dce 28%, #6bbaf1 100%);
+    overflow-x: hidden;
 }
 
 .rainbow {
@@ -458,6 +459,10 @@ a {
     border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
+a .avatar:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
 .profile-info {
     text-align: center;
     margin: 1em 1em 2em;
@@ -648,6 +653,7 @@ a {
 
 .action-text {
     color: var(--secondary);
+    max-width: 600px;
 }
 
 .circle {
