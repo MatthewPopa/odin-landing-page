@@ -575,7 +575,7 @@ a .avatar:hover {
     text-align: center;
     width: 164px;
     gap: 8px;
-    color: #595c61;
+    color: var(--light-gray);
 }
 
 .section.three {
