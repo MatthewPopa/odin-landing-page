@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Poppins:ital,wght@0,400;0,700;1,400&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:ital,wght@0,400;0,700;1,400&family=Rubik&display=swap');
 
 html {
     box-sizing: border-box;
@@ -631,7 +631,7 @@ a .avatar:hover {
 .clock-circle3 {
     position: absolute;
     width: 2px;
-    border-radius: 2px;
+    border-radius: 10px;
     transform-origin: bottom center;
     bottom: 50%;
 }
@@ -641,7 +641,6 @@ a .avatar:hover {
 .clock-circle3 {
     background-color: #f5f5f8;
     z-index: 3;
-    border-radius: 10px;
     transform-origin: unset;
     bottom: unset;
 }
@@ -673,6 +672,125 @@ a .avatar:hover {
     transform-origin: center 4.28em;
     bottom: calc(50% - 0.7em);
     animation: linear time 60s infinite;
+}
+
+.clock-minute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 4.15em;
+    width: 5px;
+    z-index: 1;
+    transform: rotateZ(0deg);
+    animation: time 3600s infinite steps(720);
+}
+
+.clock-minute::before {
+    content: " ";
+    position: absolute;
+    background-color: #F5F5F8;
+    z-index: 1;
+    width: 5px;
+    height: 3.7em;
+    border-radius: 10px;
+    box-shadow:0 0 4px rgba(0, 0, 0, .3)
+}
+
+.clock-minute::after {
+    content: " ";
+    background-color: #F5F5F8;
+    width: 3px;
+    height: 3.2em;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+.clock-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.45em;
+    width: 5px;
+    transform: rotateZ(289deg);
+    animation: time 86400s infinite steps(288);
+}
+
+.clock-hour::before {
+    content: " ";
+    position: absolute;
+    background-color: #F5F5F8;
+    z-index: 1;
+    width: 5px;
+    height: 2em;
+    border-radius: 10px;
+    box-shadow:0 0 4px rgba(0, 0, 0, .3)
+}
+
+.clock-hour::after {
+    content: " ";
+    background-color: #F5F5F8;
+    width: 3px;
+    height: 2em;
+    margin-top: 1em;
+    border-radius: 10px;
+}
+
+.clock-label {
+    position: absolute;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    top: 3em;
+    font-size: 14px;
+    color: #AEAEB1;
+}
+
+.clock-number-column {
+    position: absolute;
+    height: 7.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-text-stroke: 0.3px;
+}
+
+.clock-number-column.two {
+    transform: rotateZ(30deg);
+}
+
+.clock-number-column.two div {
+    transform: rotateZ(-30deg);
+}
+
+.clock-number-column.three {
+    transform: rotateZ(60deg);
+}
+
+.clock-number-column.three div {
+    transform: rotateZ(-60deg);
+}
+
+.clock-number-column.four {
+    transform: rotateZ(90deg);
+}
+
+.clock-number-column.four div {
+    transform: rotateZ(-90deg);
+}
+
+.clock-number-column.five {
+    transform: rotateZ(120deg);
+}
+
+.clock-number-column.five div {
+    transform: rotateZ(-120deg);
+}
+
+.clock-number-column.six {
+    transform: rotateZ(150deg);
+}
+
+.clock-number-column.six div {
+    transform: rotateZ(-150deg);
 }
 
 .clock-tick {
