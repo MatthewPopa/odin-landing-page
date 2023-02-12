@@ -616,10 +616,12 @@ a .avatar:hover {
     height: 9em;
     width: 9em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     border-radius: 100%;
-    background-color: #42424233;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .clock-second,
@@ -681,7 +683,7 @@ a .avatar:hover {
     height: 4.15em;
     width: 5px;
     z-index: 1;
-    transform: rotateZ(0deg);
+    transform: rotateZ(80deg);
     animation: time 3600s infinite steps(720);
 }
 
@@ -798,7 +800,7 @@ a .avatar:hover {
     width: 1.4px;
     background-color: #5c5c5c;
     transform-origin: center calc(4.45em - 3px);
-    top: 11px;
+    top: 4px;
     left: calc(50% - 0.7px);
 }
 
