@@ -980,7 +980,7 @@ a .avatar:hover {
     border-radius: 4px;
     padding: 4px 8px;
     position: absolute;
-    left: 105%;
+    right: 105%;
     top: 80%;
     transform: scale3d(.5,.5,1);
     z-index: 3;
@@ -988,6 +988,12 @@ a .avatar:hover {
     cursor: default;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
+}
+
+.stonks {
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 0 0.2em 0.2em 0;
 }
 
 .hero-container:hover .tooltiptext {
@@ -1000,11 +1006,11 @@ a .avatar:hover {
     content: " ";
     position: absolute;
     top: 50%;
-    right: 100%;
+    left: 100%;
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent rgba(255, 255, 255, 0.8) transparent transparent;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
 }
 
 .custom-shape {
