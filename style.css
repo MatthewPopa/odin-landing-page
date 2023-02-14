@@ -550,7 +550,8 @@ a .avatar:hover {
     font-size: 1.4rem;
 }
 
-.section-info {
+.section-info,
+.section-wrapper {
     display: flex;
     justify-content: center;
     gap: 48px;
@@ -1250,6 +1251,7 @@ a .avatar:hover {
 
 .bottom-gradient {
     background: -webkit-linear-gradient(90deg, #8660c4, #ffffff00);
+    background: -webkit-linear-gradient(90deg, #8660c4, #ffffff00);
     height: 12em;
     position: absolute;
     bottom: 0;
@@ -1278,6 +1280,7 @@ a .avatar:hover {
     transform: rotateX(180deg) scaleX(-1);
     z-index: 1;
     background: -webkit-linear-gradient(90deg, #ffffff10, #e8ecff00);
+    background: linear-gradient(90deg, #ffffff10, #e8ecff00);
 }
 
 .backdrop svg {
