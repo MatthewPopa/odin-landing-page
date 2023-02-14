@@ -980,48 +980,88 @@ a .avatar:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
 }
 
-.chart::after {
-    content: "";
+.chart-gradient {
+    position: relative;
     display: block;
     width: .6rem;
     border-radius: 2px;
 }
 
-.chart.one::after {
+.chart.one .chart-gradient {
     height: 50%;
     background: linear-gradient(rgba(195,111,223,1) 0%, rgba(120,122,239,1) 32%, rgba(120,122,239,1) 38%, rgba(235,153,82,1) 60%);
 }
 
-.chart.two::after {
+.chart.two .chart-gradient {
     height: 75%;
     background: linear-gradient(rgba(195,111,223,1) 0%, rgba(87,125,245,1) 32%, rgba(88,183,69,1) 50%, rgba(99,181,70,1) 67%, rgba(237,176,60,1) 81%);
 }
 
-.chart.three::after {
+.chart.three .chart-gradient {
     height: 80%;
     background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 20%, rgba(166,105,240,1) 34%, rgba(164,105,241,1) 64%, rgba(95,123,245,1) 77%, rgba(87,125,245,1) 85%, rgba(235,153,82,1) 100%);
 }
 
-.chart.four::after {
+.chart.four .chart-gradient {
     height: 90%;
     background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 30%, rgba(87,125,245,1) 45%, rgba(88,183,69,1) 60%, rgba(99,181,70,1) 70%, rgba(235,153,82,1) 90%);
 }
 
-.chart.five::after {
+.chart.five .chart-gradient {
     height: 85%;
     background: linear-gradient(rgba(211,115,212,1) 0%, rgba(164,105,241,1) 15%, rgba(156,108,241,1) 30%, rgba(110,125,240,1) 60%, rgba(235,153,82,1) 70%, rgba(235,153,82,1) 100%);
 }
 
-.chart.six::after {
+.chart.six .chart-gradient {
     height: 96%;
     background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 15%, rgba(99,127,240,1) 35%, rgba(86,181,82,1) 60%, rgba(235,153,82,1) 75%, rgba(235,153,82,1) 100%);
 }
 
-.chart.seven::after {
+.chart.seven .chart-gradient {
     height: 30%;
     background: linear-gradient(rgba(161,132,208,1) 0%, rgba(228,175,71,1) 40%, rgba(236,159,77,1) 100%);
+}
+
+.chart .tooltiptext {
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    width: 56px;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    margin-left: -28px;
+    transform: scale3d(.5,.5,1);
+    z-index: 3;
+    transition-duration: .2s;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.chart .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
+}
+
+.day:hover .tooltiptext {
+    transform: scale3d(1,1,1);
+    opacity: 1;
+    visibility: visible;
 }
 
 .section.three {
@@ -1175,7 +1215,7 @@ a .avatar:hover {
     transform: translate(-50%, 3em);
 }
 
-.tooltiptext {
+.hero-container .tooltiptext {
     white-space: nowrap;
     visibility: hidden;
     opacity: 0;
@@ -1207,7 +1247,7 @@ a .avatar:hover {
     visibility: visible;
 }
 
-.tooltiptext::after {
+.hero-container .tooltiptext::after {
     content: " ";
     position: absolute;
     top: 50%;
