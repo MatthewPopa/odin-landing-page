@@ -933,13 +933,13 @@ a .avatar:hover {
 .widget.wallet {
     justify-content: space-between;
     text-align: left;
-    padding: .95rem .6rem;
+    padding: .95rem .9rem;
     line-height: 1;
     font-size: 12px;
 }
 
 .wallet-header {
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 .wallet-header div {
@@ -963,22 +963,64 @@ a .avatar:hover {
     color: #76767A;
     text-align: center;
     font-size: .85em;
-    margin: 0 -1px;
 }
 
-.wallet-weeklychart div {
-    flex: 1;
+.day {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.wallet-weeklychart div::before {
-    content: "";
-    display: block;
+.chart {
     border-radius: 2px;
     height: 3rem;
     width: .6rem;
     background-color: rgba(0, 0, 0, .2);
-    margin: 0 auto;
     margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chart::after {
+    content: "";
+    display: block;
+    width: .6rem;
+    border-radius: 2px;
+}
+
+.chart.one::after {
+    height: 50%;
+    background: linear-gradient(rgba(195,111,223,1) 0%, rgba(120,122,239,1) 32%, rgba(120,122,239,1) 38%, rgba(235,153,82,1) 60%);
+}
+
+.chart.two::after {
+    height: 75%;
+    background: linear-gradient(rgba(195,111,223,1) 0%, rgba(87,125,245,1) 32%, rgba(88,183,69,1) 50%, rgba(99,181,70,1) 67%, rgba(237,176,60,1) 81%);
+}
+
+.chart.three::after {
+    height: 80%;
+    background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 20%, rgba(166,105,240,1) 34%, rgba(164,105,241,1) 64%, rgba(95,123,245,1) 77%, rgba(87,125,245,1) 85%, rgba(235,153,82,1) 100%);
+}
+
+.chart.four::after {
+    height: 90%;
+    background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 30%, rgba(87,125,245,1) 45%, rgba(88,183,69,1) 60%, rgba(99,181,70,1) 70%, rgba(235,153,82,1) 90%);
+}
+
+.chart.five::after {
+    height: 85%;
+    background: linear-gradient(rgba(211,115,212,1) 0%, rgba(164,105,241,1) 15%, rgba(156,108,241,1) 30%, rgba(110,125,240,1) 60%, rgba(235,153,82,1) 70%, rgba(235,153,82,1) 100%);
+}
+
+.chart.six::after {
+    height: 96%;
+    background: linear-gradient(rgba(215,116,210,1) 0%, rgba(215,116,210,1) 15%, rgba(99,127,240,1) 35%, rgba(86,181,82,1) 60%, rgba(235,153,82,1) 75%, rgba(235,153,82,1) 100%);
+}
+
+.chart.seven::after {
+    height: 30%;
+    background: linear-gradient(rgba(161,132,208,1) 0%, rgba(228,175,71,1) 40%, rgba(236,159,77,1) 100%);
 }
 
 .section.three {
