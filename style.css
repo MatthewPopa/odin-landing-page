@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:ital,wght@0,400;0,700;1,400&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:ital,wght@0,400;0,700;1,400&family=Rubik:wght@400;500&display=swap');
 
 html {
     box-sizing: border-box;
@@ -604,6 +604,7 @@ a .avatar:hover {
 
 .weather-bottom div {
     padding-top: .3em;
+    font-size: 12px;
 }
 
 .widget.clock {
@@ -911,6 +912,57 @@ a .avatar:hover {
 .category {
     font-size: .9em;
     color: #ADADB7;
+}
+
+.widget.wallet {
+    justify-content: space-between;
+    text-align: left;
+    padding: .95rem .6rem;
+    line-height: 1;
+    font-size: 12px;
+}
+
+.wallet-header {
+    margin-left: 5px;
+}
+
+.wallet-header div {
+    margin-bottom: 4px;
+}
+
+.wallet-available {
+    color: #98989E;
+}
+
+.wallet-balance {
+    font-size: 1.5em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.wallet-weeklychart {
+    display: flex;
+    justify-content: space-between;
+    color: #76767A;
+    text-align: center;
+    font-size: .85em;
+    margin: 0 -1px;
+}
+
+.wallet-weeklychart div {
+    flex: 1;
+}
+
+.wallet-weeklychart div::before {
+    content: "";
+    display: block;
+    border-radius: 2px;
+    height: 3rem;
+    width: .6rem;
+    background-color: rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    margin-bottom: 8px;
 }
 
 .section.three {
