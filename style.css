@@ -688,7 +688,7 @@ a .avatar:hover {
 }
 
 .clock-minute::before {
-    content: " ";
+    content: "";
     position: absolute;
     background-color: #F5F5F8;
     z-index: 1;
@@ -718,7 +718,7 @@ a .avatar:hover {
 }
 
 .clock-hour::before {
-    content: " ";
+    content: "";
     position: absolute;
     background-color: #F5F5F8;
     z-index: 1;
@@ -816,6 +816,101 @@ a .avatar:hover {
     width: 164px;
     gap: 8px;
     color: var(--light-gray);
+}
+
+.widget.twitch {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 1.1em 1em;
+}
+
+.twitch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1em;
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.twitch-live::before {
+    content: "";
+    display: inline-block;
+    margin-right: .25rem;
+    height: .48rem;
+    width: .48rem;
+    border-radius: 10px;
+    background-color: #D72F1F;
+}
+
+.twitch-header img {
+    height: 1rem;
+}
+
+.twitch-streampreview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 1em;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.twitch-thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+
+.twitch-streamer {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    padding: .4rem;
+    height: 3.2em;
+    padding-right: 0;
+}
+
+.twitch-avatar img {
+    height: 1.4rem;
+    width: auto;
+    border-radius: 2rem;
+    vertical-align: middle;
+    outline: 1.8px solid #d51a39;
+    outline: 1.8px solid #874bf6;
+    outline-offset: .8px;
+}
+
+.twitch-avatar::before {
+    position: absolute;
+    content: "";
+    margin: 1.3em 0 0 1.3em;
+    height: .5em;
+    width: .5em;
+    border-radius: 10px;
+    background-color: #D72F1F;
+    outline: 1.4px solid rgba(0, 0, 0, .4);
+}
+
+.streamerinfo {
+    padding-left: .75em;
+}
+
+.streamername {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.category {
+    font-size: .9em;
+    color: #ADADB7;
 }
 
 .section.three {
