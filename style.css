@@ -880,24 +880,39 @@ a .avatar:hover {
 }
 
 .twitch-avatar img {
+    position: relative;
     height: 1.4rem;
     width: auto;
     border-radius: 2rem;
     vertical-align: middle;
-    outline: 1.8px solid #d51a39;
+    /*outline: 1.8px solid #d51a39;
     outline: 1.8px solid #874bf6;
     outline-offset: .8px;
+    box-shadow: 0px 0px 0px .8px rgba(0, 0, 0, 0),
+                0px 0px 0px 1.8px #874bf6;*/
+}
+
+.twitch-avatar::after {
+    position: absolute;
+    content: "";
+    margin: 1.3em 0 0 -0.4em;
+    height: .45em;
+    width: .45em;
+    border-radius: 10px;
+    background-color: #D72F1F;
+    outline: 1.4px solid rgba(0, 0, 0, .4);
 }
 
 .twitch-avatar::before {
     position: absolute;
     content: "";
-    margin: 1.3em 0 0 1.3em;
-    height: .5em;
-    width: .5em;
-    border-radius: 10px;
-    background-color: #D72F1F;
-    outline: 1.4px solid rgba(0, 0, 0, .4);
+    height: calc(1.4rem + 4px);
+    width: calc(1.4rem + 4px);
+    margin: -2px;
+    border: 1.8px solid #874bf6;
+    border-radius: 2rem;
+    background-color: transparent;
+    display: inherit;
 }
 
 .streamerinfo {
@@ -905,6 +920,7 @@ a .avatar:hover {
 }
 
 .streamername {
+    color: #fff;
     font-weight: 600;
     font-size: 1.1em;
 }
@@ -985,8 +1001,7 @@ a .avatar:hover {
     height: 4em;
     width: 4em;
     border-radius: 100%;
-    outline: 2px solid var(--light-gray);
-    outline-offset: 4px;
+    box-shadow: 0px 0px 0px 4px var(--purple-space-cadet), 0px 0px 0px 6px var(--light-gray);
 }
 
 .quote {
